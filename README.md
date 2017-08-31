@@ -15,7 +15,12 @@ We are now reproducing the experiments in the original paper. Any contribution w
   - matplotlib
   - tqdm
   - cv2 (opencv)
-
+  - cupy (a numpy alike library running on GPU)
+ 
+ ## Installation of the requirements
+ - instal cudatoolkit
+ - install cudnn
+ - set path to the cuda installation
 
 # Preparation
 
@@ -26,10 +31,12 @@ bash prepare.sh
 ```
 
 This script downloads VOC 2010 dataset (<http://host.robots.ox.ac.uk/pascal/VOC/voc2010/VOCtrainval_03-May-2010.tar>) and the authors' original dataset (<http://www2.informatik.uni-freiburg.de/~oliveira/datasets/Sitting.tar.gz>).
+The pascal parts annotation list. (VOC2010 = pascal dataset!)
 
 ## Model
 
 You can download pre-trained FCN model from [here](https://drive.google.com/open?id=0BxSyYt1jT6LhUlhITjdicDFyNHM).
+(but delete the weird extention such that only the .pkl extention remains)
 
 We will use weights of this model and train new model on VOC dataset.
 
